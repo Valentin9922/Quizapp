@@ -69,7 +69,7 @@ let questions = [{
                         },
             
 ]
-
+let rightQuestion = 0;
 let currentQuestion = 0;
 
 function init(){
@@ -81,7 +81,9 @@ showQuestions();
 
 function showQuestions(){
     if(currentQuestion >= questions.length){
-        document.getElementById('i').parentNode.classList.remove('container');
+        document.getElementById('finish-card').classList.remove('d-none');
+        document.getElementById('quiz-cards').classList.add('d-none');
+        document.getElementById('end-score').innerHTML = `${rightQuestion}/${questions.length}`;
         
     }else{
     let question = questions[currentQuestion];
@@ -109,6 +111,7 @@ function answer(selection){
         document.getElementById(selection).parentNode.classList.add('bg-success');//parentNode greift auf den
          //übergeordneten div von dem ausgewähltem zu
          document.getElementById('next-button').disabled = false;
+         rightQuestion++;
     }
     else{
         console.log('falsche Antwort');

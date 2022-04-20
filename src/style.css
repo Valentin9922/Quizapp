@@ -1,9 +1,6 @@
 body{
     background-color: #FBEFC2 !important;
-    
 }
-
-
 
 .container{
     min-height: 100vh;
@@ -22,24 +19,61 @@ body{
 }
 
 .quiz-card{
+    height:25rem;
     width: 40rem;
     background-color: #74d1ffaf !important;
-    border: 5px solid lightslategray !important;
-
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important; ;
 }
 
 .quiz-answer-card{
     background-color: #ffffffb9 !important;
-
-
 }
-
 
 .quiz-answer-card:hover{
     cursor: pointer;
     background-color: #ffffff !important;
     border:1px solid lightslategray !important; ;
+}
+.navbar{
+    height:25rem;
+    width: 11rem;
+    background-color: #500c50d2 !important;
+    color: white;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
 
+.img-navbar{
+    width: 3rem;;
+}
 
+.navbar-links-container a{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.test{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.561) !important;
+}
+
+.quizz-name{
+    margin-bottom: 2rem !important;
+
+}
+.endcard{
+    display: flex !important;
+    align-items: center;
+    flex-direction: center;
+}
+.d-none{
+    display: none;
 }
 
