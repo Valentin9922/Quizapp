@@ -76,16 +76,20 @@ function init(){
 
 document.getElementById('amountQuestions').innerHTML = ` ${currentQuestion + 1} von ${questions.length} Fragen`
 showQuestions();
-
 }
 
 function showQuestions(){
-    if(currentQuestion >= questions.length){
+    if(currentQuestion >= questions.length){// Show End Screen
         document.getElementById('finish-card').classList.remove('d-none');
         document.getElementById('quiz-cards').classList.add('d-none');
         document.getElementById('end-score').innerHTML = `${rightQuestion}/${questions.length}`;
-        
-    }else{
+    }else{// Show Questions
+        let percent = (currentQuestion +1) / questions.length;
+        percent = Math.round(percent * 100); // Math.round(14,55555) rundet das in der klammer auf bsp 15
+        console.log('percent', percent);
+
+        document.getElementById('progress-bar').style =`width: ${percent}%`;
+
     let question = questions[currentQuestion];
 
     document.getElementById('questionText').innerHTML = question['question'];
@@ -95,7 +99,6 @@ function showQuestions(){
     document.getElementById('answer_4').innerHTML = question['answer_4'];
   
     }
-    
 }
 
 function answer(selection){

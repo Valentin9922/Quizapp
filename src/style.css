@@ -73,6 +73,13 @@ body{
     align-items: center;
     flex-direction: center;
 }
+
+.progress-bar{
+    border-top-left-radius: none !important;
+    border-bottom-left-radius: none !important;
+}
+
+
 .d-none{
     display: none;
 }
